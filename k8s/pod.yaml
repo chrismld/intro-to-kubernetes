@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-hello-pod
+  labels:
+    app: api-hello
+spec:
+  containers:
+  - name: api-hello
+    image: christianhxc/api-hello:latest
+    ports:
+    - containerPort: 8080

@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: api-hello-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: api-hello
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

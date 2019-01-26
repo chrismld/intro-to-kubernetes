@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-hello-deployment
+  labels:
+    app: api-hello
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: api-hello
+  template:
+    metadata:
+      labels:
+        app: api-hello
+    spec:
+      containers:
+      - name: api-hello
+        image: christianhxc/api-hello:latest
+        ports:
+        - containerPort: 8080
