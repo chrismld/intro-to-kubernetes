@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: api-hello
-    image: christianhxc/api-hello:latest
+    image: christianhxc/api-hello:1.0
     ports:
     - containerPort: 8080
